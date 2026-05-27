@@ -174,13 +174,13 @@ tailwind.config = {
             </div>
         </div>
     </footer>
-    <script type="module">
-        lucide.createIcons();
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Vielen Dank! Ihre Nachricht wurde (simuliert) erfolgreich versendet.');
-        });
-    </script>
+    <script>
+lucide.createIcons();
+
+document.getElementById('contact-form').addEventListener('submit', () => {
+    alert('Vielen Dank! Ihre Anfrage wird versendet.');
+});
+</script>
     <script src="main.js"></script>
 <script>
   lucide.createIcons();
