@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VGML Service | Referenzen</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { anthracite: "#121212", royalblue: "#0052FF", offwhite: "#F5F5F5" } } }
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-anthracite text-offwhite pt-32">
+    <!-- Navigation -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 glass-nav">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html" class="text-2xl font-serif tracking-tight text-white">VGML<span class="text-royalblue"> SERVICE</span></a>
+    <div class="hidden md:flex items-center space-x-6 text-sm font-medium uppercase tracking-wide">
+      <a href="leistungen.html" class="nav-link">Leistungen</a>
+      <a href="ueber-uns.html" class="nav-link">Über uns</a>
+      <a href="referenzen.html" class="nav-link text-royalblue active">Referenzen</a>
+      <a href="kontakt.html" class="btn-primary ml-4">Erstgespräch</a>
+    </div>
+    <button class="md:hidden text-white" id="mobile-menu-toggle">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-anthracite z-40 flex flex-col items-center justify-center space-y-8 text-xl uppercase">
+    <a href="leistungen.html">Leistungen</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="referenzen.html">Referenzen</a>
+    <a href="kontakt.html" class="btn-primary px-8 py-4">Erstgespräch</a>
+</div>
+
+    <section class="max-w-7xl mx-auto px-6 mb-32">
+
+    <h1 class="text-5xl md:text-7xl font-serif mb-12">
+        Projekt <span class="text-royalblue italic">Beispiele.</span>
+    </h1>
+
+    <p class="text-gray-400 max-w-2xl mb-24">
+        Auswahl an Designkonzepten und Beispielprojekten für lokale Unternehmen. 
+        Diese Projekte zeigen mögliche Lösungen für moderne Websites, 
+        die neue Kunden gewinnen und Vertrauen schaffen.
+    </p>
+
+    <div class="space-y-32">
+
+        <!-- Projekt 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div class="order-2 lg:order-1">
+                <span class="text-royalblue font-bold tracking-widest uppercase text-sm mb-4 block">
+                    Beispielprojekt
+                </span>
+
+                <h2 class="text-4xl font-serif mb-6">
+                    Friseur Website Konzept
+                </h2>
+
+                <p class="text-gray-400 leading-relaxed">
+                    Modernes Webdesign für einen Friseursalon mit Fokus auf hochwertiger 
+                    Bildsprache, Online-Terminbuchung und klarer Nutzerführung. 
+                    Ziel ist es, lokale Kunden anzusprechen und Vertrauen aufzubauen.
+                </p>
+                <a href="friseurindex.html" 
+                    class="inline-block mt-8 border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition mb-8">
+                    Projekt ansehen
+                </a>   
+
+                <div class="grid grid-cols-2 gap-8 py-8 border-y border-white/10">
+
+                    <div>
+                        <div class="text-3xl font-serif text-white">Luxury</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">
+                            Design Stil
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-3xl font-serif text-white">Local SEO</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">
+                            Fokus
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 glass-card p-4 rounded-3xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"
+                     class="w-full rounded-2xl h-[400px] object-cover">
+            </div>
+
+        </div>
+
+
+        <!-- Projekt 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div class="glass-card p-4 rounded-3xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
+                     class="w-full rounded-2xl h-[400px] object-cover">
+            </div>
+
+            <div>
+
+                <span class="text-royalblue font-bold tracking-widest uppercase text-sm mb-4 block">
+                    Beispielprojekt
+                </span>
+
+                <h2 class="text-4xl font-serif mb-6">
+                    Handwerker Website Konzept
+                </h2>
+
+                <p class="text-gray-400 leading-relaxed">
+                    Conversion-optimierte Website für lokale Handwerksbetriebe. 
+                    Klare Struktur, schnelle Ladezeiten und eine starke 
+                    Call-to-Action sorgen dafür, dass Besucher zu Anfragen werden.
+                </p>
+                <a href="friseurindex.html" 
+                    class="inline-block mt-8 border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition mb-8">
+                    Projekt ansehen
+                </a>  
+                <div class="grid grid-cols-2 gap-8 py-8 border-y border-white/10">
+
+                    <div>
+                        <div class="text-3xl font-serif text-white">Lead Gen</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">
+                            Ziel
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-3xl font-serif text-white">Mobile</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">
+                            Optimiert
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Projekt 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div class="order-2 lg:order-1">
+
+                <span class="text-royalblue font-bold tracking-widest uppercase text-sm mb-4 block">
+                    Beispielprojekt
+                </span>
+
+                <h2 class="text-4xl font-serif mb-6">
+                    Restaurant Website Konzept
+                </h2>
+
+                <p class="text-gray-400 leading-relaxed">
+                    Moderne Website für Restaurants mit digitaler Speisekarte, 
+                    Reservierungsmöglichkeiten und visueller Präsentation der Küche. 
+                    Perfekt für Gastronomie mit lokalem Fokus.
+                </p>
+                <a href="friseurindex.html" 
+                    class="inline-block mt-8 border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition mb-8">
+                    Projekt ansehen
+                </a>  
+                <div class="grid grid-cols-2 gap-8 py-8 border-y border-white/10">
+
+                    <div>
+                        <div class="text-3xl font-serif text-white">UX</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">
+                            Nutzererlebnis
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-3xl font-serif text-white">Brand</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">
+                            Präsentation
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="order-1 lg:order-2 glass-card p-4 rounded-3xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
+                     class="w-full rounded-2xl h-[400px] object-cover">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+
+  <div class="text-center mb-16">
+    <h2 class="text-3xl md:text-5xl font-serif mb-4">Was unsere Kunden sagen</h2>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      Vertrauen entsteht durch Ergebnisse. Ein Einblick in Erfahrungen unserer Partner.
+    </p>
+    <div class="w-20 h-1 bg-royalblue mx-auto mt-6"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Bewertung 1 -->
+    <div class="glass-card p-8 rounded-2xl">
+      <div class="flex items-center mb-4 text-yellow-400">
+        ★★★★★
+      </div>
+      <p class="text-gray-300 mb-6">
+        „VGML hat unsere Website komplett neu aufgebaut. Design, Geschwindigkeit
+        und Struktur sind auf einem ganz neuen Level. Die Zusammenarbeit war
+        professionell und effizient.“
+      </p>
+      <div class="text-sm text-gray-400">
+        <p class="font-semibold text-white">Max Mustermann</p>
+        <p>Geschäftsführer, Muster GmbH</p>
+      </div>
+    </div>
+
+    <!-- Bewertung 2 -->
+    <div class="glass-card p-8 rounded-2xl">
+      <div class="flex items-center mb-4 text-yellow-400">
+        ★★★★★
+      </div>
+      <p class="text-gray-300 mb-6">
+        „Unsere neue Website generiert endlich Anfragen. Das Team hat nicht
+        nur ein schönes Design geliefert, sondern eine echte Strategie.“
+      </p>
+      <div class="text-sm text-gray-400">
+        <p class="font-semibold text-white">Anna Becker</p>
+        <p>Marketing Managerin</p>
+      </div>
+    </div>
+
+    <!-- Bewertung 3 -->
+    <div class="glass-card p-8 rounded-2xl">
+      <div class="flex items-center mb-4 text-yellow-400">
+        ★★★★★
+      </div>
+      <p class="text-gray-300 mb-6">
+        „Extrem schnelle Umsetzung und sehr hochwertige Designs. Wir haben
+        bereits mehrere Projekte gemeinsam umgesetzt.“
+      </p>
+      <div class="text-sm text-gray-400">
+        <p class="font-semibold text-white">Daniel Weber</p>
+        <p>Founder, Startup Berlin</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Google CTA -->
+  <div class="text-center mt-16">
+    <a href="https://www.google.com/maps" target="_blank"
+       class="btn-primary w-full sm:w-auto px-10 py-5 text-lg font-semibold">
+       Bewertungen auf Google ansehen
+    </a>
+  </div>
+
+</section>
+    <!-- Footer -->
+    <footer class="bg-black pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="text-3xl font-serif tracking-tighter text-white mb-6 block">
+                        VGML<span class="text-royalblue"> SERVICE</span>
+                    </a>
+                    <p class="text-gray-500 max-w-sm mb-8">
+                        Wir bauen keine Webseiten. Wir bauen digitale Vertriebskanäle für den deutschen Mittelstand.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/vgml_service/" target="_blank" rel="noopener noreferrer" class="text-royalblue hover:text-white transition-colors">
+                             <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/deinprofil/" target="_blank" rel="noopener noreferrer" class="text-royalblue hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Navigation</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="leistungen.html" class="hover:text-white">Leistungen</a></li>
+                        <li><a href="ueber-uns.html" class="hover:text-white">Über uns</a></li>
+                        <li><a href="referenzen.html" class="hover:text-white">Referenzen</a></li>
+                        <li><a href="kontakt.html" class="hover:text-white">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Rechtliches</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
+                &copy; 2026 VGML Service. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+    <script>
+  lucide.createIcons();
+
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  window.addEventListener("scroll", function() {
+    const nav = document.getElementById("main-nav");
+    if (window.scrollY > 30) {
+      nav.classList.add("nav-scrolled");
+    } else {
+      nav.classList.remove("nav-scrolled");
+    }
+  });
+</script>
+</body>
+</html>

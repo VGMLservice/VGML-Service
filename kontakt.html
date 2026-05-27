@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VGML Service | Kontakt</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { anthracite: "#121212", royalblue: "#0052FF", offwhite: "#F5F5F5" } } }
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="bg-anthracite text-offwhite pt-32">
+    <!-- Navigation -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 glass-nav">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html" class="text-2xl font-serif tracking-tight text-white">VGML<span class="text-royalblue"> SERVICE</span></a>
+    <div class="hidden md:flex items-center space-x-6 text-sm font-medium uppercase tracking-wide">
+      <a href="leistungen.html" class="nav-link">Leistungen</a>
+      <a href="ueber-uns.html" class="nav-link">Über uns</a>
+      <a href="referenzen.html" class="nav-link">Referenzen</a>
+      <a href="kontakt.html" class="btn-primary ml-4 active">Erstgespräch</a>
+    </div>
+    <button class="md:hidden text-white" id="mobile-menu-toggle">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-anthracite z-40 flex flex-col items-center justify-center space-y-8 text-xl uppercase">
+    <a href="leistungen.html">Leistungen</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="referenzen.html">Referenzen</a>
+    <a href="kontakt.html" class="btn-primary px-8 py-4">Erstgespräch</a>
+</div>
+
+    <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-serif mb-8 leading-tight">Starten Sie Ihr <span class="text-royalblue italic">Wachstum.</span></h1>
+                <p class="text-xl text-gray-400 mb-12">Lassen Sie uns in einem 15-minütigen Gespräch klären, wie wir Ihre digitale Präsenz auf das nächste Level heben.</p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 bg-royalblue/10 rounded-full flex items-center justify-center text-royalblue shrink-0">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Schnelle Antwort</h4>
+                            <p class="text-gray-400">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 bg-royalblue/10 rounded-full flex items-center justify-center text-royalblue shrink-0">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Direkter Kontakt</h4>
+                            <p class="text-gray-400">Persönliches Gespräch direkt mit der Geschäftsführung.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-2xl mx-auto">
+    <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xnjblrby" method="POST">
+        <!-- Name & Unternehmen -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-sm font-medium mb-2">Vollständiger Name</label>
+                <input type="text" placeholder="Max Mustermann" required
+                       class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Unternehmen</label>
+                <input type="text" placeholder="Muster GmbH"
+                       class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
+            </div>
+        </div>
+
+        <!-- E-Mail -->
+        <div>
+            <label class="block text-sm font-medium mb-2">E-Mail Adresse</label>
+            <input type="email" placeholder="max@unternehmen.de" required
+                   class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
+        </div>
+
+        <!-- Vorhaben / Budget -->
+        <div>
+            <label class="block text-sm font-medium mb-2">Ihr Vorhaben / Budget</label>
+            <select
+                class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
+                <option>Starter</option>
+                <option>Business</option>
+                <option>Premium</option>
+                <option>Individuell</option>
+            </select>
+        </div>
+
+        <!-- Nachricht -->
+        <div>
+            <label class="block text-sm font-medium mb-2">Nachricht</label>
+            <textarea rows="4" placeholder="Erzählen Sie uns kurz von Ihrem Projekt..."
+                      class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+                class="btn-primary w-full py-5 rounded-xl text-lg font-bold transition-colors duration-300 hover:bg-royalblue/90">
+            Anfrage absenden
+        </button>
+
+        <p class="text-xs text-center text-gray-600 mt-2">
+            Durch das Absenden akzeptieren Sie unsere <a href="datenschutz.html" class="underline hover:text-royalblue">Datenschutzbestimmungen</a>.
+        </p>
+    </form>
+</div>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer class="bg-black pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="text-3xl font-serif tracking-tighter text-white mb-6 block">
+                        VGML<span class="text-royalblue"> SERVICE</span>
+                    </a>
+                    <p class="text-gray-500 max-w-sm mb-8">
+                        Wir machen Unternehmen dort sichtbar, wo Kunden wirklich suchen.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/vgml_service/" target="_blank" rel="noopener noreferrer" class="text-royalblue hover:text-white transition-colors">
+                             <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/deinprofil/" target="_blank" rel="noopener noreferrer" class="text-royalblue hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Navigation</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="leistungen.html" class="hover:text-white">Leistungen</a></li>
+                        <li><a href="ueber-uns.html" class="hover:text-white">Über uns</a></li>
+                        <li><a href="referenzen.html" class="hover:text-white">Referenzen</a></li>
+                        <li><a href="kontakt.html" class="hover:text-white">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Rechtliches</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
+                &copy; 2026 VGML Service. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+    <script type="module">
+        lucide.createIcons();
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Vielen Dank! Ihre Nachricht wurde (simuliert) erfolgreich versendet.');
+        });
+    </script>
+    <script src="main.js"></script>
+<script>
+  lucide.createIcons();
+
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  window.addEventListener("scroll", function() {
+    const nav = document.getElementById("main-nav");
+    if (window.scrollY > 30) {
+      nav.classList.add("nav-scrolled");
+    } else {
+      nav.classList.remove("nav-scrolled");
+    }
+  });
+</script>
+</body>
+</html>

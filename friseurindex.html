@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friseurmeisterin | Ihr Premium-Friseur in Dresden</title>
+    <meta name="description" content="Erleben Sie Entspannung und Meisterhandwerk in Dresden-Johannstadt. Spezialist für Hochzeitsfrisuren, moderne Schnitte und Wohlfühl-Momente. Jetzt Termin sichern!">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bordeaux: '#4A0E0E',
+                        gold: '#D4AF37',
+                        creme: '#FAF9F6',
+                        anthracite: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <a href="referenzen.html" 
+class="fixed bottom-8 right-8 bg-bordeaux text-white w-14 h-14 flex items-center justify-center rounded-full shadow-xl hover:bg-gold hover:text-bordeaux transition-all duration-300 z-50 text-xl">
+←
+</a>
+</head>
+<body class="bg-creme text-anthracite font-sans antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="main-header" class="header fixed w-full z-50 transition-all duration-500 py-6 bg-white/5 backdrop-blur-xl border-b border-white/10">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="logo">
+            <a href="#" class="text-xl md:text-2xl font-serif tracking-[0.2em] uppercase text-white transition-colors duration-300">
+                Friseur Name
+            </a>
+        </div>
+        
+        <nav class="hidden md:flex space-x-10 items-center text-[11px] tracking-[0.25em] uppercase font-medium">
+            <a href="#leistungen" class="text-white hover:text-gold transition-colors">Leistungen</a>
+            <a href="#ueber-uns" class="text-white hover:text-gold transition-colors">Über uns</a>
+            <a href="#hochzeit" class="text-white hover:text-gold transition-colors">Hochzeit</a>
+            <a href="#kontakt" class="text-white hover:text-gold transition-colors">Kontakt</a>
+            <a href="tel:+493514593345" class="bg-gold text-white px-8 py-3 rounded-full hover:bg-white hover:text-bordeaux transition-all duration-300 shadow-lg">
+                Termin sichern
+            </a>
+        </nav>
+
+        <button class="md:hidden text-white" id="mobile-menu-btn">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://r2-bucket.flowith.net/f/9e82a917c7afe280/luxury_salon_hero_image_index_0%404096x2286.jpeg" 
+                 alt="Premium Salon Ambiente" class="w-full h-full object-cover scale-105 animate-subtle-zoom">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-6 max-w-5xl">
+            <span class="block text-gold uppercase tracking-[0.4em] mb-6 text-sm opacity-0" id="hero-pre-title">Friseurmeisterin seit 2007</span>
+            <h1 class="text-5xl md:text-8xl font-serif mb-8 opacity-0 leading-tight" id="hero-title">
+                Entspannung ist <br><span class="italic">Kopfsache.</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-12 font-light tracking-wide max-w-2xl mx-auto opacity-0" id="hero-subline">
+                Perfekte Schnitte. Meisterhafte Stylings. <br>Wohlfühlmomente im Herzen von Dresden.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center opacity-0" id="hero-btns">
+                <a href="tel:+493514593345" class="bg-bordeaux border border-bordeaux text-white px-10 py-5 rounded-full hover:bg-gold hover:border-gold transition-all duration-500 shadow-xl">
+                    Termin vereinbaren
+                </a>
+                <a href="#leistungen" class="bg-transparent border border-white/50 backdrop-blur-sm text-white px-10 py-5 rounded-full hover:bg-white hover:text-bordeaux transition-all duration-500">
+                    Jetzt beraten lassen
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Über Uns -->
+    <section id="ueber-uns" class="py-32 bg-white">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal-left relative">
+                <div class="aspect-[4/5] overflow-hidden rounded-sm">
+                    <img src="https://r2-bucket.flowith.net/f/64ff3cdebe631f68/luxury_hair_salon_interior_index_1%404096x2286.jpeg" 
+                         alt="Salon Interieur Susanne Paatz" class="w-full h-full object-cover shadow-2xl">
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-2/3 h-2/3 border border-gold/30 -z-10 hidden md:block"></div>
+                <div class="absolute top-1/2 -left-8 -translate-y-1/2 bg-bordeaux p-8 hidden xl:block shadow-2xl">
+                    <p class="text-white font-serif italic text-2xl tracking-wide">Meisterhandwerk <br>mit Herz.</p>
+                </div>
+            </div>
+            <div class="reveal-right">
+                <span class="text-gold uppercase tracking-[0.3em] text-xs mb-6 block font-semibold">Willkommen</span>
+                <h2 class="text-4xl md:text-6xl font-serif text-bordeaux mb-8 leading-tight italic">Mehr als ein Friseurbesuch – <br>ein Moment für Sie.</h2>
+                <div class="space-y-6 text-gray-600 leading-relaxed text-lg font-light">
+                    <p>Seit über 17 Jahren ist das Friseurhandwerk für mich mehr als nur ein Beruf – es ist meine Leidenschaft. In meinem Salon in der Johannstadt verfolge ich eine klare Vision: Jeden Gast nicht nur schöner, sondern auch glücklicher zu machen.</p>
+                    <p>Als Friseurmeisterin lege ich höchsten Wert auf Präzision und Qualität. Bei mir finden Sie keine Massenabfertigung, sondern ehrliches Handwerk in einem familiären Umfeld. Ich nehme mir Zeit für Ihre Wünsche und berate Sie mit der Erfahrung aus fast zwei Jahrzehnten Meisterschaft.</p>
+                </div>
+                <div class="mt-12 flex items-center gap-6">
+                    <div class="h-[1px] w-16 bg-gold"></div>
+                    <span class="font-serif italic text-2xl text-bordeaux">Friseur Name</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" class="py-32 bg-[#F9F7F2]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20 reveal-up">
+                <span class="text-gold uppercase tracking-[0.3em] text-xs mb-4 block font-semibold">Exklusivität</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-bordeaux mb-6">Unser Leistungsportfolio</h2>
+                <div class="h-1 w-20 bg-gold mx-auto mb-8"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto font-light text-lg">Zeitlose Eleganz trifft auf modernes Handwerk. Wir verwenden ausschließlich hochwertige Pflegeprodukte für Ihr Haar.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Damen -->
+                <div class="service-card p-12 bg-white shadow-sm hover:shadow-2xl transition-all duration-500 group border border-gray-50">
+                    <div class="w-16 h-16 bg-creme rounded-full flex items-center justify-center mb-8 group-hover:bg-bordeaux transition-colors duration-500">
+                        <i data-lucide="scissors" class="text-gold group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-6 text-bordeaux">Damen & Styling</h3>
+                    <p class="text-gray-500 mb-8 font-light leading-relaxed">Typgerechte Beratung, präzise Schnitte und ein Finish, das Ihre Persönlichkeit strahlen lässt.</p>
+                    <ul class="text-[10px] space-y-3 uppercase tracking-[0.2em] text-gold font-bold">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Klassische Schnitte</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Modernes Styling</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Typberatung</li>
+                    </ul>
+                </div>
+                <!-- Coloration -->
+                <div class="service-card p-12 bg-white shadow-sm hover:shadow-2xl transition-all duration-500 group border border-gray-50">
+                    <div class="w-16 h-16 bg-creme rounded-full flex items-center justify-center mb-8 group-hover:bg-bordeaux transition-colors duration-500">
+                        <i data-lucide="sparkles" class="text-gold group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-6 text-bordeaux">Coloration</h3>
+                    <p class="text-gray-500 mb-8 font-light leading-relaxed">Von brillanten Farbveredelungen bis zu sanftem Balayage für natürlich gesundes, glänzendes Haar.</p>
+                    <ul class="text-[10px] space-y-3 uppercase tracking-[0.2em] text-gold font-bold">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Glossing & Finish</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Balayage Techniken</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Foliensträhnen</li>
+                    </ul>
+                </div>
+                <!-- Extras -->
+                <div class="service-card p-12 bg-white shadow-sm hover:shadow-2xl transition-all duration-500 group border border-gray-50">
+                    <div class="w-16 h-16 bg-creme rounded-full flex items-center justify-center mb-8 group-hover:bg-bordeaux transition-colors duration-500">
+                        <i data-lucide="heart" class="text-gold group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-6 text-bordeaux">Wohlfühlen</h3>
+                    <p class="text-gray-500 mb-8 font-light leading-relaxed">Wir kümmern uns um die ganze Familie. Herzlicher Service in einer ruhigen, gepflegten Atmosphäre.</p>
+                    <ul class="text-[10px] space-y-3 uppercase tracking-[0.2em] text-gold font-bold">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Kinderhaarschnitte</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Kopfmassage</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-gold rounded-full"></div> Getränke-Service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hochzeit Highlight -->
+    <section id="hochzeit" class="relative py-32 bg-bordeaux text-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-black/10 -skew-x-12 translate-x-20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="reveal-left">
+                    <span class="text-gold uppercase tracking-[0.3em] text-xs mb-6 block font-semibold">Brautstyling Spezialistin</span>
+                    <h2 class="text-4xl md:text-7xl font-serif mb-10 leading-tight">Ein Strahlen, das <span class="italic">bleibt.</span></h2>
+                    <p class="text-xl font-light mb-10 leading-relaxed opacity-80 max-w-xl">
+                        Wenn alle Augen auf Sie gerichtet sind, muss jedes Detail stimmen. Mein Brautstyling ist so individuell wie Ihre Liebesgeschichte. In entspannter Atmosphäre kreiere ich Ihre Traumfrisur – professionell, ruhig und mit dem Blick für das Besondere.
+                    </p>
+                    <div class="space-y-4 mb-12">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="check" class="text-gold w-5 h-5"></i>
+                            <span class="text-sm tracking-wide opacity-90 uppercase">Individueller Probetermin</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="check" class="text-gold w-5 h-5"></i>
+                            <span class="text-sm tracking-wide opacity-90 uppercase">Vor-Ort-Service am Hochzeitstag</span>
+                        </div>
+                    </div>
+                    <a href="tel:+493514593345" class="inline-block bg-gold border border-gold text-white hover:bg-transparent px-12 py-5 transition-all duration-500 rounded-full font-semibold shadow-2xl">
+                        Braut-Beratung anfragen
+                    </a>
+                </div>
+                <div class="reveal-right relative">
+                    <div class="aspect-square relative z-10 group overflow-hidden">
+                        <img src="https://r2-bucket.flowith.net/f/29c9d22e69044dd5/bridal_updo_hairstyle_closeup_index_2%404096x4096.jpeg" 
+                             alt="Exklusive Brautfrisur Dresden" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110">
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-full h-full border border-gold/40 -z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-32 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="flex justify-center gap-1 mb-6">
+                    <i data-lucide="star" class="fill-gold text-gold w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-gold text-gold w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-gold text-gold w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-gold text-gold w-5 h-5"></i>
+                    <i data-lucide="star" class="fill-gold text-gold w-5 h-5"></i>
+                </div>
+                <h2 class="text-4xl font-serif text-bordeaux italic">Was unsere Kundinnen sagen</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal-left p-12 bg-[#FDFBF7] border-l-4 border-gold shadow-sm">
+                    <p class="italic text-gray-700 mb-8 text-lg font-light">"Seit vielen Jahren meine erste Adresse in Dresden. Susanne versteht ihr Handwerk blind und schafft es jedes Mal, dass ich den Alltag komplett vergesse. Die Herzlichkeit hier ist einmalig!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-[1px] bg-gold"></div>
+                        <span class="font-bold text-bordeaux text-xs tracking-[0.2em] uppercase">Anja S., Stammkundin</span>
+                    </div>
+                </div>
+                <div class="reveal-right p-12 bg-[#FDFBF7] border-l-4 border-gold shadow-sm">
+                    <p class="italic text-gray-700 mb-8 text-lg font-light">"Besonders das Hochzeitsstyling war ein Traum – ich habe mich den ganzen Tag sicher und wunderschön gefühlt. Eine Atmosphäre zum Wohlfühlen!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-[1px] bg-gold"></div>
+                        <span class="font-bold text-bordeaux text-xs tracking-[0.2em] uppercase">Katrin M.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location -->
+    <section class="py-24 bg-[#F9F7F2]">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal-left">
+                <h2 class="text-4xl font-serif text-bordeaux mb-8">Ihre Auszeit in der Pfotenhauerstraße.</h2>
+                <p class="text-gray-600 mb-10 leading-relaxed font-light text-lg">
+                    In unserem Wohlfühl-Salon in Dresden-Johannstadt erwartet Sie mehr als nur ein Haarschnitt. Wir haben einen Ort geschaffen, an dem die Hektik der Stadt draußen bleibt. Genießen Sie die Ruhe in hellem, stilvollem Ambiente.
+                </p>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <p class="font-bold text-bordeaux uppercase tracking-widest text-xs">Anschrift</p>
+                        <p class="text-sm font-light">Pfotenhauerstraße 23<br>01307 Dresden</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="font-bold text-bordeaux uppercase tracking-widest text-xs">Parken</p>
+                        <p class="text-sm font-light">Kostenfreie Parkplätze in unmittelbarer Nähe vorhanden.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal-right h-[400px] bg-gray-200 shadow-2xl relative overflow-hidden grayscale contrast-125">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.970224037597!2d13.7712316!3d51.053676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709cf167f564f9b%3A0x6b42b85c1819e99a!2sPfotenhauerstr.%2023%2C%2001307%20Dresden!5e0!3m2!1sde!2sde!4v1710000000000!5m2!1sde!2sde" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 bg-bordeaux text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://r2-bucket.flowith.net/f/9e82a917c7afe280/luxury_salon_hero_image_index_0%404096x2286.jpeg" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-6xl font-serif mb-8 leading-tight">Gönnen Sie sich Ihre Auszeit.</h2>
+            <p class="mb-12 text-gold italic text-xl">Termine sind besonders vor Hochzeiten schnell vergeben.</p>
+            <a href="tel:+493514593345" class="inline-block bg-white text-bordeaux px-16 py-6 rounded-full font-bold uppercase tracking-[0.2em] hover:bg-gold hover:text-white transition-all duration-500 shadow-2xl">
+                Jetzt Termin sichern
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontakt" class="bg-anthracite py-24 text-white/60">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-20">
+            <div>
+                <h4 class="font-serif text-3xl text-white mb-8 tracking-widest uppercase">Susanne Paatz</h4>
+                <div class="space-y-4 font-light text-sm tracking-wide">
+                    <p class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-gold"></i> Pfotenhauerstraße 23, 01307 Dresden</p>
+                    <p class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-gold"></i> <a href="tel:+493514593345" class="hover:text-gold transition-colors">0351 / 459 33 45</a></p>
+                    <p class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-gold"></i> <a href="mailto:info@friseur-paatz-dresden.de" class="hover:text-gold transition-colors">info@friseur-paatz-dresden.de</a></p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white uppercase tracking-[0.3em] mb-8 font-semibold text-xs">Öffnungszeiten</h4>
+                <ul class="space-y-4 text-sm font-light">
+                    <li class="flex justify-between border-b border-white/5 pb-2"><span>Dienstag - Mittwoch:</span> <span>09:00 - 18:00</span></li>
+                    <li class="flex justify-between border-b border-white/5 pb-2"><span>Donnerstag - Freitag:</span> <span>09:00 - 19:00</span></li>
+                    <li class="flex justify-between border-b border-white/5 pb-2"><span>Samstag:</span> <span class="text-gold">Nach Vereinbarung</span></li>
+                    <li class="flex justify-between"><span>Montag & Sonntag:</span> <span>Geschlossen</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white uppercase tracking-[0.3em] mb-8 font-semibold text-xs">Newsletter</h4>
+                <p class="text-xs mb-6 leading-relaxed">Erhalten Sie exklusive Pflegetipps und Informationen zu freien Terminen vor der Hochzeitssaison.</p>
+                <div class="flex">
+                    <input type="email" placeholder="E-Mail Adresse" class="bg-white/5 border border-white/10 px-4 py-3 text-xs w-full focus:outline-none focus:border-gold transition-colors">
+                    <button class="bg-gold px-6 py-3 text-white hover:bg-white hover:text-bordeaux transition-all"><i data-lucide="send" class="w-4 h-4"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] tracking-[0.3em] uppercase opacity-50">
+            <span>© 2026 Friseurmeisterin Susanne Paatz | Dresden Johannstadt</span>
+            <div class="flex gap-10 mt-6 md:mt-0">
+                <a href="impressum.html" class="hover:text-gold transition-colors">Impressum</a>
+                <a href="datenschutz.html" class="hover:text-gold transition-colors">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts.js"></script>
+    <!-- Hero Fade-In + Slide-Up Script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // -----------------------
+    // 1️⃣ Hero Animation (nur wenn Element existiert)
+    // -----------------------
+    const heroElements = [
+        "hero-pre-title",
+        "hero-title",
+        "hero-subline",
+        "hero-btns"
+    ];
+
+    heroElements.forEach((id, index) => {
+        const el = document.getElementById(id);
+        if (!el) return; // nur ausführen, wenn das Element existiert
+
+        // Startposition
+        el.style.opacity = 0;
+        el.style.transform = "translateY(20px)";
+
+        // Gestaffelte Animation
+        setTimeout(() => {
+            gsap.to(el, {
+                duration: 1,
+                opacity: 1,
+                y: 0,
+                ease: "power3.out"
+            });
+        }, index * 400); // 400ms Abstand zwischen den Elementen
+    });
+
+    // -----------------------
+    // 2️⃣ Bounce-Pfeil Animation
+    // -----------------------
+    const heroArrow = document.querySelector(".animate-bounce");
+    if (heroArrow) {
+        gsap.to(heroArrow, {
+            y: -15,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+            duration: 0.8
+        });
+
+        // Optional: Klick scrollt zur nächsten Sektion
+        heroArrow.addEventListener("click", () => {
+            const nextSection = document.querySelector("section:nth-of-type(2)"); // zweite Sektion
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    }
+
+    // -----------------------
+    // 3️⃣ Mobile Menu Toggle
+    // -----------------------
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const navMenu = document.querySelector("nav");
+
+    if (mobileBtn && navMenu) {
+        mobileBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("hidden");
+        });
+    }
+
+    // -----------------------
+    // 4️⃣ Scroll Reveal für Sektionen
+    // -----------------------
+    const revealElements = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up");
+    revealElements.forEach(el => {
+        // initial versteckt
+        el.style.opacity = 0;
+        el.style.transform = "translateY(20px)";
+
+        // ScrollTrigger nur wenn GSAP + ScrollTrigger verfügbar
+        if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        }
+    });
+
+    // -----------------------
+    // 5️⃣ Lucide Icons Initialisieren
+    // -----------------------
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+    }
+});
+</script>
+<script>
+const header = document.getElementById("main-header");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+});
+</script>
+</body>
+</html>

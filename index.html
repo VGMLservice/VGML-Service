@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGML Service | Websites, die verkaufen</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Tailwind Config -->
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            anthracite: "#121212",
+            royalblue: "#0052FF",
+            offwhite: "#F5F5F5"
+          }
+        }
+      }
+    }
+    </script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-anthracite text-offwhite overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="main-nav"
+     class="fixed top-0 w-full z-50 transition-all duration-500">
+
+    <div id="nav-inner"
+         class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between transition-all duration-500">
+
+        <!-- Logo -->
+        <a href="index.html"
+           class="text-2xl font-serif tracking-tight text-white">
+            VGML<span class="text-royalblue"> SERVICE</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6 text-sm font-medium uppercase tracking-wide">
+
+            <a href="leistungen.html" class="nav-link">Leistungen</a>
+            <a href="ueber-uns.html" class="nav-link">Über uns</a>
+            <a href="referenzen.html" class="nav-link">Referenzen</a>
+
+            <a href="kontakt.html" class="btn-primary ml-4">
+                Erstgespräch
+            </a>
+
+        </div>
+
+        <button class="md:hidden text-white" id="mobile-menu-toggle">
+            <i data-lucide="menu"></i>
+        </button>
+
+    </div>
+</nav>
+    <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-anthracite z-40 flex flex-col items-center justify-center space-y-8 text-xl uppercase">
+    <a href="leistungen.html">Leistungen</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="referenzen.html">Referenzen</a>
+    <a href="kontakt.html" class="btn-primary px-8 py-4">Erstgespräch</a>
+</div>
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://r2-bucket.flowith.net/f/8fa0763e0a23f163/cinematic_hero_image_design_agency_index_0%404096x2286.jpeg" 
+                 alt="Luxury Design Agency Hero" class="w-full h-full object-cover opacity-40 scale-105" id="hero-img">
+            <div class="absolute inset-0 bg-gradient-to-b from-anthracite/20 via-anthracite/60 to-anthracite"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-6xl px-6">
+            <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight fade-up">
+                Mehr Sichtbarkeit. Mehr Vertrauen. <span class="text-royalblue italic">Mehr Kunden.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto font-light fade-up delay-100">
+                Lokale Kunden suchen online — wir sorgen dafür, dass Ihr Unternehmen gefunden wird. Mit optimierter Google-Maps-Präsenz und professionellem digitalen Auftritt.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 fade-up delay-200">
+                <a href="kontakt.html" class="btn-primary w-full sm:w-auto px-10 py-5 text-lg font-semibold">Strategiegespräch vereinbaren</a>
+                <a href="referenzen.html" class="btn-secondary w-full sm:w-auto px-10 py-5 text-lg font-semibold border border-white/20">Portfolio ansehen</a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Why VGML Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="mb-16 text-center">
+        <h2 class="text-3xl md:text-5xl font-serif mb-4">Warum VGML Service?</h2>
+        <div class="w-20 h-1 bg-royalblue mx-auto"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Card 1 -->
+        <div class="group bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl transition-all duration-500 hover:border-royalblue hover:shadow-[0_10px_50px_rgba(0,82,255,0.3)] hover:scale-105">
+            <div class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-royalblue/20 text-royalblue">
+                <i data-lucide="layout-dashboard" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-royalblue transition-colors">Strategisches Design</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Wir entwickeln Konzepte, die nicht nur gut aussehen, sondern Ihre Unternehmensziele unterstützen.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl transition-all duration-500 hover:border-royalblue hover:shadow-[0_10px_50px_rgba(0,82,255,0.3)] hover:scale-105">
+            <!-- Icon -->
+            <div class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-royalblue/20 text-royalblue">
+                <i data-lucide="trending-up" class="w-8 h-8"></i>
+            </div>
+            <!-- Titel -->
+            <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-royalblue transition-colors">Mehr Anfragen</h3>
+            <!-- Text -->
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Durch psychologisch optimierte Nutzerführung konvertieren wir Besucher in wertvolle Leads.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl transition-all duration-500 hover:border-royalblue hover:shadow-[0_10px_50px_rgba(0,82,255,0.3)] hover:scale-105">
+            <!-- Icon -->
+            <div class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-royalblue/20 text-royalblue">
+                <i data-lucide="user-check" class="w-8 h-8"></i>
+            </div>
+            <!-- Titel -->
+            <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-royalblue transition-colors">Persönliche Betreuung</h3>
+            <!-- Text -->
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Kein Ticket-System. Sie haben einen festen Ansprechpartner, der Ihr Business versteht.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl transition-all duration-500 hover:border-royalblue hover:shadow-[0_10px_50px_rgba(0,82,255,0.3)] hover:scale-105">
+            <!-- Icon -->
+            <div class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-royalblue/20 text-royalblue">
+                <i data-lucide="zap" class="w-8 h-8"></i>
+            </div>
+            <!-- Titel -->
+            <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-royalblue transition-colors">Schnelle Umsetzung</h3>
+            <!-- Text -->
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Von der Idee zum Go-Live in Rekordzeit – ohne Abstriche bei Qualität oder Präzision.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Referenzen Teaser -->
+    <section class="py-24 bg-black/40 border-y border-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+      <div class="max-w-xl">
+        <h2 class="text-4xl md:text-5xl font-serif mb-4">Digitale Meisterwerke</h2>
+        <p class="text-gray-400 text-lg">
+          Ein Auszug unserer jüngsten Projekte, bei denen Ästhetik auf messbare Performance trifft.
+        </p>
+      </div>
+      <a href="referenzen.html" class="group flex items-center gap-2 text-royalblue font-semibold uppercase tracking-widest text-sm">
+        Alle Projekte <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </div>
+    
+    <div class="relative group overflow-hidden rounded-3xl glass-card transition-transform duration-500 hover:scale-105">
+      <img src="https://r2-bucket.flowith.net/f/9763e29032a5fd67/luxury_real_estate_website_mockup_index_3%402752x1536.jpeg" 
+           alt="Luxury Real Estate Mockup" 
+           class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105">
+      
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <span class="text-royalblue font-bold uppercase tracking-widest mb-2 text-sm">Immobilien-Investment</span>
+        <h3 class="text-3xl md:text-4xl font-serif mb-4 text-white">The Obsidian Residency</h3>
+        <p class="max-w-md text-gray-300 mb-6 text-sm md:text-base">
+          +140% qualifizierte Anfragen durch exklusives Dark-Mode Design.
+        </p>
+        <a href="referenzen.html" class="inline-block py-2 px-5 text-sm font-semibold rounded-full border border-white/20 text-white hover:bg-royalblue hover:text-white transition-colors">
+          Case Study lesen
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="text-3xl font-serif tracking-tighter text-white mb-6 block">
+                        VGML<span class="text-royalblue"> SERVICE</span>
+                    </a>
+                    <p class="text-gray-500 max-w-sm mb-8">
+                        Wir machen Unternehmen dort sichtbar, wo Kunden wirklich suchen.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/vgml_service/" target="_blank" rel="noopener noreferrer" class="text-royalblue hover:text-white transition-colors">
+                             <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/deinprofil/" target="_blank" rel="noopener noreferrer" class="text-royalblue hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Navigation</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="leistungen.html" class="hover:text-white">Leistungen</a></li>
+                        <li><a href="ueber-uns.html" class="hover:text-white">Über uns</a></li>
+                        <li><a href="referenzen.html" class="hover:text-white">Referenzen</a></li>
+                        <li><a href="kontakt.html" class="hover:text-white">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Rechtliches</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
+                &copy; 2026 VGML Service. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+  lucide.createIcons();
+</script>
+<script>
+window.addEventListener("scroll", function() {
+    const nav = document.getElementById("main-nav");
+
+    if (window.scrollY > 30) {
+        nav.classList.add("nav-scrolled");
+    } else {
+        nav.classList.remove("nav-scrolled");
+    }
+});
+</script>
+</body>
+</html>

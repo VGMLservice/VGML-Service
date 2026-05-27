@@ -1,0 +1,162 @@
+:root {
+    --anthracite: #121212;
+    --royalblue: #0052FF;
+    --offwhite: #F5F5F5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--offwhite);
+    background-color: var(--anthracite);
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-royalblue {
+    color: var(--royalblue);
+}
+
+.bg-anthracite {
+    background-color: var(--anthracite);
+}
+
+.bg-royalblue {
+    background-color: var(--royalblue);
+}
+
+.glass-nav {
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--royalblue);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--anthracite);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--royalblue);
+}
+
+/* Form Styles */
+input, textarea, select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--royalblue);
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+/* Apple Style Glass */
+#main-nav {
+    background: rgba(20, 20, 20, 0.55);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Beim Scrollen etwas dichter */
+.nav-scrolled {
+    background: rgba(15, 15, 15, 0.75);
+    backdrop-filter: saturate(200%) blur(25px);
+}
+
+/* Navigation Links */
+.nav-link {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+.nav-link.active,
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Premium CTA */
+.btn-primary {
+    padding: 10px 24px;
+    border-radius: 9999px;
+    background: #0052ff;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-primary.active,
+.btn-primary:hover {
+    background: white;
+    color: rgba(18, 18, 18, 0.8);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+}
+/* Premium CTA */
+.btn-secondary {
+    padding: 10px 24px;
+    
+    background: transparent;
+    color: white;
+    display: inline-flex;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #0052ff;
+    color: white;
+    box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+}
+#main-nav {
+    background: rgba(20, 20, 20, 0.55);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
