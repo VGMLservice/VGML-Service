@@ -83,12 +83,12 @@ tailwind.config = {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
                 <label class="block text-sm font-medium mb-2">Vollständiger Name</label>
-                <input type="text" placeholder="Max Mustermann" required
+                <input type="text" name="name" placeholder="Max Mustermann" required
                        class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
             </div>
             <div>
                 <label class="block text-sm font-medium mb-2">Unternehmen</label>
-                <input type="text" placeholder="Muster GmbH"
+                <input type="text" name="company" placeholder="Muster GmbH"
                        class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
             </div>
         </div>
@@ -96,14 +96,14 @@ tailwind.config = {
         <!-- E-Mail -->
         <div>
             <label class="block text-sm font-medium mb-2">E-Mail Adresse</label>
-            <input type="email" placeholder="max@unternehmen.de" required
+            <input type="email" name="email" placeholder="max@unternehmen.de" required
                    class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
         </div>
 
         <!-- Vorhaben / Budget -->
         <div>
             <label class="block text-sm font-medium mb-2">Ihr Vorhaben / Budget</label>
-            <select
+            <select name="budget"
                 class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none">
                 <option>Starter</option>
                 <option>Business</option>
@@ -115,7 +115,7 @@ tailwind.config = {
         <!-- Nachricht -->
         <div>
             <label class="block text-sm font-medium mb-2">Nachricht</label>
-            <textarea rows="4" placeholder="Erzählen Sie uns kurz von Ihrem Projekt..."
+            <textarea name="message" rows="4" placeholder="Erzählen Sie uns kurz von Ihrem Projekt..."
                       class="w-full p-3 rounded-lg bg-anthracite text-offwhite border border-white/20 focus:border-royalblue focus:ring-1 focus:ring-royalblue outline-none"></textarea>
         </div>
 
