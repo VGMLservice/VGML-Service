@@ -179,10 +179,10 @@ tailwind.config = {
     die Abgabe von Rezensionen und stärken Vertrauen, Sichtbarkeit
     und den digitalen Restaurantauftritt.
                 </p>
-                <a href="friseurindex.html" 
-                    class="inline-block mt-8 border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition mb-8">
-                    Projekt ansehen
-                </a>  
+                <button id="open-project"
+class="inline-block mt-8 border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition mb-8">
+    Projekt ansehen
+</button>  
                 <div class="grid grid-cols-2 gap-8 py-8 border-y border-white/10">
 
                     <div>
@@ -213,6 +213,31 @@ tailwind.config = {
     </div>
 
 </section>
+  <div id="project-modal"
+class="fixed inset-0 hidden items-center justify-center bg-black/90 backdrop-blur-md z-[9999] p-6">
+
+    <div class="relative max-w-5xl w-full flex justify-center">
+
+        <!-- Close Button -->
+
+        <button id="close-project"
+        class="absolute top-0 right-0 -mt-6 -mr-6 w-12 h-12 rounded-full bg-white text-black hover:bg-blue-600 hover:text-white transition text-2xl z-50">
+
+            ×
+
+        </button>
+
+        <!-- Bild -->
+
+        <img
+        src="images/Speisekarte.png"
+        alt="Projekt"
+
+        class="max-w-[90vw] max-h-[80vh] object-contain rounded-3xl shadow-2xl">
+
+    </div>
+
+</div>
     <section class="py-24 px-6 max-w-7xl mx-auto">
 
   <div class="text-center mb-16">
@@ -324,6 +349,42 @@ tailwind.config = {
             </div>
         </div>
     </footer>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const openBtn = document.getElementById("open-project");
+const closeBtn = document.getElementById("close-project");
+const modal = document.getElementById("project-modal");
+
+openBtn.addEventListener("click", function(){
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+});
+
+closeBtn.addEventListener("click", function(){
+
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+
+});
+
+modal.addEventListener("click", function(e){
+
+    if(e.target === modal){
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+
+    }
+
+});
+
+});
+
+</script>
     <script>
   lucide.createIcons();
 
